@@ -10,6 +10,9 @@ export class WcBioHostComponent implements OnInit {
   documentNumber: string;
   showWebComponent: boolean;
   responseEvent: any;
+  showNames: boolean;
+  showNamesFlags: boolean[] = [true, false];
+  branchId: number;
 
   constructor() { }
 

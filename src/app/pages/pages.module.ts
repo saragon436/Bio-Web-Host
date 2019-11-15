@@ -3,6 +3,7 @@ import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
+import { MatRadioModule } from '@angular/material/radio';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { WcBioHostComponent } from './wc-bio-host/wc-bio-host.component';
 
@@ -12,6 +13,7 @@ import { WcBioHostComponent } from './wc-bio-host/wc-bio-host.component';
     BrowserAnimationsModule,
     CommonModule,
     MatFormFieldModule,
+    MatRadioModule,
     MatInputModule,
     FormsModule,
   ],
@@ -23,9 +25,10 @@ import { WcBioHostComponent } from './wc-bio-host/wc-bio-host.component';
 })
 export class PagesModule {
 
+  private readonly urlOfWebcomponent = `https://psalguero.sfo2.cdn.digitaloceanspaces.com/bio/wc-bio/v1/main_uat.js`;
+
   constructor() {
-    this.loadScript('wc-bio',
-    'https://psalguero.sfo2.digitaloceanspaces.com/bio/wc-bio/v1/main_mock_api_management.js');
+    this.loadScript('wc-bio', this.urlOfWebcomponent);
   }
 
   private loadScript(idScript: string, urlScript: string): void {
