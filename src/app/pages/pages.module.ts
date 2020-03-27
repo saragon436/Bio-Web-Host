@@ -25,8 +25,9 @@ import { WcBioHostComponent } from './wc-bio-host/wc-bio-host.component';
 })
 export class PagesModule {
 
-  private readonly urlOfWebcomponent = `https://psalguero.sfo2.cdn.digitaloceanspaces.com/bio/wc-bio/v1/main_uat.js`;
-
+  //private readonly urlOfWebcomponent = `https://psalguero.sfo2.cdn.digitaloceanspaces.com/bio/wc-bio/v1/main_uat.js`;
+ // private readonly urlOfWebcomponent = `http://10.11.177.53:9080/bio/cdn/v1/main.js`;
+  private readonly urlOfWebcomponent = `https://uxrf-uat.azureedge.net/uxrf-monolith-cdn/web-components/bio/v1/main.js`;
   constructor() {
     this.loadScript('wc-bio', this.urlOfWebcomponent);
   }

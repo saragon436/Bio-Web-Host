@@ -84,16 +84,7 @@
                 </mat-radio-group>
               </div>
 
-              <mat-form-field appearance="outline" style="width: 300px !important;">
-                <mat-label>Branch ID</mat-label>
-                <input matInput
-                  type="number"
-                  placeholder="100"
-                  value="100"
-                  name="branchId"
-                  maxlength="3"
-                  [(ngModel)]="branchId">
-              </mat-form-field>
+             
 
 
               <mat-form-field appearance="outline" style="width: 300px !important;">
@@ -105,12 +96,23 @@
                   [(ngModel)]="documentNumber">
               </mat-form-field>
 
+              <mat-form-field appearance="outline" style="width: 300px !important;">
+                <mat-label>Branch ID</mat-label>
+                <input matInput
+                  type="number"
+                  placeholder="100"
+                  value="'100'"
+                  name="branchId"
+                  maxlength="3"
+                  [(ngModel)]="branchId">
+              </mat-form-field>
+
               <div *ngIf="showWebComponent">
                 <ibk-wc-bio
                   (resolveProcess)="handlerFinishProcess($event.detail)"
                   [documentNumber]="documentNumber"
                   [register]="'S36413'"
-                  [store]="branchId"
+                  store={{branchId}}
                   [transactionCode]="'FTI-01'"
                   [mode]="'popup'"
                   [autoplay]="false"

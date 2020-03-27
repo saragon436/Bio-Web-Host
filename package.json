@@ -9,7 +9,8 @@
     "deploy": "firebase deploy --token 1/lSAAPBm1oTS9i3S6ax0QEgy6nveQ6eTZKfb_Es_ma78",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "serve": "serve dist"
   },
   "private": true,
   "dependencies": {
